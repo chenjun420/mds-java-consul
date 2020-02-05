@@ -1,0 +1,33 @@
+# Spring环境配置
+spring:
+  profiles:
+    active: dev
+
+  application:
+    name: demo
+
+  # 使用Consul配置中心
+  cloud:
+    consul:
+      host: 127.0.0.1 #consul地址
+      port: 8500  #consul端口
+      discovery:
+        #是否启用服务发现
+        enabled: true
+        #配置实例id，一般取默认值，单机多次运行参考如下，增加随机值防止重复
+        #instance-id: ${spring.application.name}:${random.value}
+        #表示注册时使用ip而不是hostname
+        prefer-ip-address: true
+      config:
+        #开启配置中心
+        enabled: true
+        #Consul配置的文件夹前缀
+        prefix: ConfigCenter
+        #配置默认路径
+        defaultContext: ${spring.application.name}
+        #配置环境分割符
+        profileSeparator: '/'
+        #配置参数
+        data-key: data
+        #配置中心数据样式
+        format: YAML

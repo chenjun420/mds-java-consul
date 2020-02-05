@@ -1,0 +1,24 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.primary",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.pts.mds.common.dynamicdatasource.MdsDynamicDataSourceConfig",
+      "sourceMethod": "primaryDataSource()"
+    },
+    {
+      "name": "spring.datasource.secondary",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.pts.mds.common.dynamicdatasource.MdsDynamicDataSourceConfig",
+      "sourceMethod": "secondaryDataSource()"
+    },
+    {
+      "name": "spring.datasource.thirdary",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.pts.mds.common.dynamicdatasource.MdsDynamicDataSourceConfig",
+      "sourceMethod": "thirdaryDataSource()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
